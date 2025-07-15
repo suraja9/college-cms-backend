@@ -63,6 +63,11 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
+app.get("/", (req, res) => {
+  res.send("Backend is working ✅");
+});
+
+
 app.get('/api/student/attendance/:studentId', (req, res) => {
   const studentId = req.params.studentId;
 
